@@ -1,0 +1,5 @@
+name: latex-transform
+version: 1.0.0
+description: LaTeX math formula interception and conversion for better display
+provides_hooks:
+  - transform_llm_output
