@@ -165,6 +165,7 @@ def tex_to_unicode(input_str: str) -> str:
     s = re.sub(r'\\mathfrak\s*\{([A-Za-z])\}', lambda m: FRAK.get(m.group(1), m.group(0)), s)
     s = re.sub(r'\\mathbf\s*\{([^{}]+)\}', lambda m: m.group(1), s)
     s = re.sub(r'\\mathit\s*\{([^{}]+)\}', lambda m: m.group(1), s)
+    s = re.sub(r'\\textit\s*\{([^{}]+)\}', lambda m: m.group(1), s)
     s = re.sub(r'\\mathrm\s*\{([^{}]+)\}', lambda m: m.group(1), s)
     s = re.sub(r'\\text\s*\{([^{}]+)\}', lambda m: m.group(1), s)
     s = re.sub(r'\\operatorname\s*\{([^{}]+)\}', lambda m: m.group(1), s)
